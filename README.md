@@ -1,6 +1,6 @@
 # DevOps Tools Docker Image
 
-== NOTE: this is for the `linux/amd64` platform only.
+NOTE: this is for the `linux/amd64` platform only.
 
 This repository provides a comprehensive Docker image designed for cloud development and automation tasks. It bundles essential tools like Terraform, Packer, AWS CLI, Google Cloud SDK (gcloud), kubectl, and Ansible into a single, portable, and consistent environment.
 
