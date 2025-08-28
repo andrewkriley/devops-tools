@@ -1,5 +1,5 @@
 # This workflow is named "Docker CI" for clarity.
-name: Devops Tools Docker Image CI Build
+name: Devops Tools Docker Image CI Build OSX
 
 # This section specifies the events that trigger the workflow.
 on:
