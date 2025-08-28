@@ -23,38 +23,38 @@ Once the image is built, you can start an interactive shell within a new contain
 docker run -it --rm andreril/devops-tools:latest
 ```
 
-The -it flags provide an interactive terminal.
+The `-it` flags provide an interactive terminal.
 
-The --rm flag ensures the container is automatically removed when you exit the session.
+The `--rm` flag ensures the container is automatically removed when you exit the session.
 
 You are now in a pre-configured environment with all the tools ready to use.
 
 🛠️ Included Tools
 This image contains the following key tools, as well as a range of common system utilities:
 
-HashiCorp Terraform: For infrastructure as code (IaC).
+## HashiCorp Terraform: For infrastructure as code (IaC).
 
-HashiCorp Packer: For creating virtual machine images.
+## HashiCorp Packer: For creating virtual machine images.
 
-AWS CLI v2: The command-line interface for Amazon Web Services.
+## AWS CLI v2: The command-line interface for Amazon Web Services.
 
-Google Cloud SDK (gcloud): The command-line tool for Google Cloud.
+## Google Cloud SDK (gcloud): The command-line tool for Google Cloud.
 
-kubectl: The command-line tool for managing Kubernetes clusters.
+## kubectl: The command-line tool for managing Kubernetes clusters.
 
-Ansible: An open-source automation tool for configuration management.
+## Ansible: An open-source automation tool for configuration management.
 
-Core Utilities: Includes git, curl, wget, jq, vim, nano, and more for general use.
+### Core Utilities: Includes git, curl, wget, jq, vim, nano, and more for general use.
 
-💡 Usage Examples
+# 💡 Usage Examples
 You can mount your local working directory into the container to work on your projects. This allows you to use the pre-configured tools while maintaining your files on your host machine.
-
+```
 docker run -it --rm -v $(pwd):/app andreril/devops-tools:latest
+```
+The `-v $(pwd):/app` flag mounts the current directory `($(pwd))` on your host machine into the container's `/app` directory, which is the default working directory set in the Dockerfile.
 
-The -v $(pwd):/app flag mounts the current directory ($(pwd)) on your host machine into the container's /app directory, which is the default working directory set in the Dockerfile.
-
-🤝 Contributing
+# 🤝 Contributing
 Contributions are welcome! If you have suggestions for improvements or new tools to add, please feel free to open an issue or submit a pull request.
 
-📄 License
+# 📄 License
 This project is licensed under the MIT License. For more details, see the LICENSE file in this repository.
