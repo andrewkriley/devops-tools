@@ -100,7 +100,6 @@ LABEL org.label-schema.vcs-url="https://github.com/andrewkriley/devops-tools"
 #
 LABEL org.label-schema.license="MIT"
 # LABEL org.label-schema.vcs-ref="<commit-sha>"
-#
 # The `vcs-ref` label can be used to tag a specific Git commit hash.
 
 # Set the default command to start a bash shell, which is useful for interactive use.
