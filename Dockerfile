@@ -98,7 +98,7 @@ LABEL org.label-schema.vcs-url="https://github.com/andrewkriley/devops-tools"
 # project, a permissive license like MIT is highly recommended.
 # You should include a full LICENSE file in your repository.
 #
-# LABEL org.label-schema.license="MIT"
+LABEL org.label-schema.license="MIT"
 # LABEL org.label-schema.vcs-ref="<commit-sha>"
 #
 # The `vcs-ref` label can be used to tag a specific Git commit hash.
