@@ -1,5 +1,5 @@
 # This workflow is named "Docker CI" for clarity.
-name: Docker Image CI Build
+name: Devops Tools Docker Image CI Build
 
 # This section specifies the events that trigger the workflow.
 # It is configured to run on a push to any branch, but only
@@ -50,4 +50,4 @@ jobs:
           # We use the DOCKERHUB_USERNAME secret and tag the image as `latest`.
           # For a more robust versioning strategy, you could use a unique
           # identifier like `${{ github.sha }}` for each build.
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/your-image-name:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/devops-tools:latest
