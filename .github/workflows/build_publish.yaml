@@ -1,5 +1,5 @@
 # This workflow is named "Docker CI" for clarity.
-name: Docker CI
+name: Docker Image CI Build
 
 # This section specifies the events that trigger the workflow.
 # It is configured to run on a push to any branch, but only
