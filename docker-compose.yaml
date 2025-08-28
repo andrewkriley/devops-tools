@@ -1,0 +1,38 @@
+# This is a Docker Compose file to manage the DevOps tools container.
+# It uses the version 3.8 syntax.
+
+# The 'services' key defines the containers that will be created and managed by Docker Compose.
+services:
+  # The name of our service, which is 'devops-tools'. You can change this to anything you like.
+  devops-tools:
+    # The 'build' instruction tells Docker Compose to build an image from the Dockerfile
+    # in the current directory ('.'). This is a crucial step that will use your
+    # provided Dockerfile to create the image.
+    build: .
+
+    # 'container_name' assigns a specific name to the container instance,
+    # making it easier to reference and manage.
+    container_name: devops-tools
+
+    # 'stdin_open' keeps the standard input (stdin) open, which is necessary
+    # for interactive use, like running shell commands.
+    stdin_open: true
+
+    # 'tty' allocates a pseudo-TTY, which, combined with 'stdin_open',
+    # ensures you have a fully functional interactive terminal when you attach
+    # to the container.
+    tty: true
+
+    # 'volumes' allows you to mount a host directory into the container.
+    # This is extremely useful for sharing code, scripts, or configuration files
+    # between your local machine and the container.
+    # The example below mounts the current directory from your host machine (`.`)
+    # to the `/app` directory inside the container, which is the WORKDIR
+    # defined in your Dockerfile.
+    volumes:
+      - .:/app
+
+    # 'restart' specifies the restart policy for the container.
+    # 'unless-stopped' will restart the container automatically unless it is
+    # explicitly stopped by the user (e.g., with `docker-compose down`).
+    restart: unless-stopped

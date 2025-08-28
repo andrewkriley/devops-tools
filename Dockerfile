@@ -1,5 +1,5 @@
 #
-# Dockerfile to build a comprehensive DevOps workstation image.
+# Dockerfile to build a comprehensive DevOps tools image.
 # This image includes essential tools for cloud development and
 # automation, making it ideal for CI/CD pipelines or a personal
 # development environment.
@@ -109,6 +109,6 @@ LABEL org.label-schema.vcs-url="https://github.com/andrewkriley/devops-tools"
 # Set the default command to start a bash shell, which is useful for interactive use.
 # CMD ["/bin/bash"]
 # It's often better to use ENTRYPOINT to make the container behave like an
-# executable, and CMD to provide default arguments. For a "workstation" image,
+# executable, and CMD to provide default arguments. For a "tools" image,
 # a simple CMD is sufficient, but this is a good practice to be aware of.
 ENTRYPOINT ["/bin/bash"]
