@@ -3,7 +3,6 @@ name: Devops Tools Docker Image CI Build
 
 # This section specifies the events that trigger the workflow.
 on:
-  workflow_dispatch:
   push:
     paths:
       - 'Dockerfile'
