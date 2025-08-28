@@ -1,0 +1,53 @@
+# This workflow is named "Docker CI" for clarity.
+name: Docker CI
+
+# This section specifies the events that trigger the workflow.
+# It is configured to run on a push to any branch, but only
+# if the `Dockerfile` file has been modified.
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'Dockerfile'
+
+# The `jobs` section contains one or more jobs.
+# This workflow has a single job called `build-and-push-image`.
+jobs:
+  build-and-push-image:
+    # Specifies the type of runner the job will be executed on.
+    # `ubuntu-latest` is a commonly used and reliable choice.
+    runs-on: ubuntu-latest
+
+    # The `steps` section defines the sequence of tasks for the job.
+    steps:
+      # Step 1: Checkout the repository code.
+      # This action checks out your repository under $GITHUB_WORKSPACE,
+      # so your workflow can access it.
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Step 2: Log in to Docker Hub.
+      # This action authenticates with Docker Hub using secrets.
+      # You MUST add `DOCKERHUB_USERNAME` and `DOCKERHUB_TOKEN`
+      # to your repository's GitHub Secrets.
+      # The token should be a Personal Access Token (PAT) from Docker Hub.
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      # Step 3: Build and push the Docker image.
+      # This is the core step that uses the `build-push-action`.
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          # `context: .` specifies the build context as the root of the repository.
+          context: .
+          # `push: true` tells the action to push the built image to the registry.
+          push: true
+          # `tags` defines the image name and tag.
+          # We use the DOCKERHUB_USERNAME secret and tag the image as `latest`.
+          # For a more robust versioning strategy, you could use a unique
+          # identifier like `${{ github.sha }}` for each build.
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/your-image-name:latest
