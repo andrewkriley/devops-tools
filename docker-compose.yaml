@@ -5,13 +5,9 @@
 services:
   # The name of our service, which is 'devops-tools'. You can change this to anything you like.
   devops-tools:
-    # The 'build' instruction tells Docker Compose to build an image from the Dockerfile
-    # in the current directory ('.'). This is a crucial step that will use your
-    # provided Dockerfile to create the image.
-    build: .
-
+    image: andreril/devops-tools:latest
     # 'container_name' assigns a specific name to the container instance,
-    # making it easier to reference and manage.
+    # making it easier to reference and manager
     container_name: devops-tools
 
     # 'stdin_open' keeps the standard input (stdin) open, which is necessary
