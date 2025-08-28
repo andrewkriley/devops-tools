@@ -49,4 +49,4 @@ jobs:
           # linux/amd64: Standard Linux architecture, covers Linux and most macOS (Intel).
           # linux/arm64: Covers modern macOS (Apple Silicon) and other ARM-based devices.
           # windows/amd64: Standard Windows architecture.
-          platforms: linux/amd64,linux/arm64,windows/amd64
+          #platforms: linux/amd64,linux/arm64,windows/amd64
