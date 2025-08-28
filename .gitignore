@@ -1,0 +1,38 @@
+# Local environment variables
+.env
+
+# Local .terraform directories
+**/.terraform/*
+
+# Variables files
+*.auto.tfvars
+*.tfvars
+
+# Override files
+*.tfoverride
+
+# Environment-specific files
+.envrc
+
+# CLI configuration files
+.terraformrc
+terraform.rc
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# Crash log files
+crash.log
+crash.*.log
+
+# Sensitive files
+*.pem
+#*.key
+*.pub
+
+# Terraform lock file
+.terraform.lock.hcl
+
+#Otherfiles
+.DS_Store
