@@ -32,19 +32,19 @@ You are now in a pre-configured environment with all the tools ready to use.
 🛠️ Included Tools
 This image contains the following key tools, as well as a range of common system utilities:
 
-## HashiCorp Terraform: For infrastructure as code (IaC).
+* HashiCorp Terraform: For infrastructure as code (IaC).
 
-## HashiCorp Packer: For creating virtual machine images.
+* HashiCorp Packer: For creating virtual machine images.
 
-## AWS CLI v2: The command-line interface for Amazon Web Services.
+* AWS CLI v2: The command-line interface for Amazon Web Services.
 
-## Google Cloud SDK (gcloud): The command-line tool for Google Cloud.
+* Google Cloud SDK (gcloud): The command-line tool for Google Cloud.
 
-## kubectl: The command-line tool for managing Kubernetes clusters.
+* kubectl: The command-line tool for managing Kubernetes clusters.
 
-## Ansible: An open-source automation tool for configuration management.
+* Ansible: An open-source automation tool for configuration management.
 
-### Core Utilities: Includes git, curl, wget, jq, vim, nano, and more for general use.
+* Core Utilities: Includes git, curl, wget, jq, vim, nano, and more for general use.
 
 # 💡 Usage Examples
 You can mount your local working directory into the container to work on your projects. This allows you to use the pre-configured tools while maintaining your files on your host machine.
