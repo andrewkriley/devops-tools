@@ -73,9 +73,11 @@ RUN curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/s
     install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl && \
     rm kubectl
 
-# Install Ansible using the Python Package Index (PyPI).
+# Install Ansible using the APT repository
 # This is a good way to get a recent version without relying on OS repositories.
-RUN pip3 install ansible
+# Install Ansible
+RUN apt-get update && apt-get install -y ansible && \
+    rm -rf /var/lib/apt/lists/*
 
 # --- Stage 3: Container Configuration ---
 
