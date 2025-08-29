@@ -23,7 +23,7 @@ This command builds the image and tags it as andreril/devops-tools:latest. The p
 Once the image is built, you can start an interactive shell within a new container using this command:
 
 ```
-docker run -it --rm andreril/devops-tools:latest
+docker run -it --platform linux/amd64 --rm andreril/devops-tools:latest
 ```
 
 The `-it` flags provide an interactive terminal.
