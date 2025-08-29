@@ -3,9 +3,7 @@ name: Devops Tools Docker Image CI Build OSX
 
 # This section specifies the events that trigger the workflow.
 on:
-  push:
-    paths:
-      - 'Dockerfile'
+  workflow_dispatch
 
 # The `jobs` section contains one or more jobs.
 # This workflow has a single job called `build-and-push-image`.
