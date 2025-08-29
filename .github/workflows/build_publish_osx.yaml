@@ -47,4 +47,4 @@ jobs:
           # linux/arm64: Covers modern macOS (Apple Silicon) and other ARM-based devices.
           # windows/amd64: Standard Windows architecture. (not supported with an Ubuntu base for the build)
           # building multipl platform takes a long time as it uses QEMU emulation
-          platforms: linuxarm64
+          platforms: linux/arm64
