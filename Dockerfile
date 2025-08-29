@@ -75,7 +75,6 @@ RUN curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/s
 
 # Install Ansible using the APT repository
 # This is a good way to get a recent version without relying on OS repositories.
-# Install Ansible
 RUN apt-get update && apt-get install -y ansible && \
     rm -rf /var/lib/apt/lists/*
 
